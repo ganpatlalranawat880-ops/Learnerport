@@ -1,0 +1,8 @@
+{
+  "name": "Learnerport",
+  "description": "Educational content-sharing platform to discover, upload, read, save, download, review, and share educational resources.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

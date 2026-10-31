@@ -1,0 +1,1202 @@
+# PROJECT: LEARNERPORT
+
+## Complete Educational Content-Sharing Application
+
+Build a complete, modern, premium, fully functional educational content-sharing web application named **Learnerport**.
+
+The application must allow users to discover, upload, read, save, download, review, and share educational resources.
+
+This is a real application project, not just a UI prototype.
+
+Use your best judgment for architecture, UI/UX, database structure, component design, and implementation details while preserving all requirements defined below.
+
+Do not repeatedly ask me to approve small design decisions. Make sensible decisions independently and implement the best practical solution.
+
+IMPORTANT:
+
+* Do not omit any mandatory feature.
+* Do not create duplicate navigation options.
+* Do not add unnecessary sections or excessive features.
+* Do not generate nonfunctional buttons.
+* Do not use fake analytics or fake user engagement.
+* Do not claim integrations are working until they are configured and tested.
+
+---
+
+# 1. APPLICATION IDENTITY
+
+Application name: Learnerport
+
+Brand styling:
+
+* "Learner" must be blue.
+* "port" must be black.
+* Display the combined wordmark as Learnerport.
+
+Use:
+
+* Primary blue: #007AFF.
+* White or very light background.
+* Dark, readable typography.
+* Premium card design.
+* Professional SVG icons.
+* Clean spacing.
+* Rounded components.
+* Subtle shadows.
+* Smooth, restrained animations.
+
+The app must feel modern, trustworthy, simple, and professional.
+
+Design inspiration:
+
+* Premium educational platforms.
+* Modern social content-sharing applications.
+* Clean iOS-style interfaces.
+* Professional document libraries.
+
+Do not copy another application's branding or exact design.
+
+Support light mode and dark mode.
+
+The application must work properly on mobile phones, tablets, laptops, and desktop computers.
+
+---
+
+# 2. CORE PURPOSE
+
+Learnerport is a platform where learners can discover and share educational knowledge.
+
+Users must be able to:
+
+1. Discover educational notes.
+2. Find and read educational books in PDF format.
+3. Find previous-year question papers and practice papers.
+4. Discover programming and coding learning resources.
+5. Upload tutorials, notes, and educational PDFs.
+6. Share thoughts related to education, learning, technology, and other meaningful topics.
+7. Follow useful creators and receive their new publications in the Home feed.
+8. Save and download useful resources.
+9. Track their content's views, downloads, ratings, and comments.
+10. Manage their profiles and published resources.
+
+Keep these purposes at the center of the product.
+
+---
+
+# 3. AUTHENTICATION AND FIRST-TIME SETUP
+
+Users must authenticate before accessing the main application.
+
+Implement:
+
+* Sign up with Google.
+* Sign up with Apple.
+* Email registration.
+* Email login.
+* Forgot password.
+* Secure logout.
+* Session persistence.
+* Protected routes.
+
+Use the authentication provider and services supported by the chosen development environment.
+
+Google and Apple authentication must use real provider integrations. If credentials or configuration are missing, explain exactly what is required.
+
+Do not simulate successful authentication.
+
+After successful signup or first login, open a one-time profile setup screen.
+
+The user must be able to:
+
+* Choose a unique username.
+* Set a display name.
+* Upload a profile photo.
+* Add an optional bio.
+* Select educational interests.
+* Select preferred topics.
+
+USERNAME REQUIREMENTS:
+
+* Every user must have a unique username.
+* Validate username availability against the actual database.
+* Show a clear message if a username is unavailable.
+* Allow username editing later through the profile or account settings.
+* Revalidate username uniqueness when changed.
+* Do not use the username as a substitute for secure internal user IDs.
+
+PROFILE PHOTO REQUIREMENTS:
+
+* Allow users to upload a photo from their device.
+* Show an image preview before saving.
+* Allow users to replace or remove their photo.
+* Store the photo in supported file storage.
+* Display the updated photo throughout the application.
+
+After completing the initial profile setup, open the Home screen.
+
+IMPORTANT FIRST-TIME EXPERIENCE:
+
+The initial username and profile photo setup must appear only when genuinely required.
+
+Do not repeatedly show the same setup screen after it has been completed.
+
+If the user later edits their profile, open the editor only after an explicit action.
+
+Do not show duplicate welcome screens, repeated onboarding, or unnecessary popups.
+
+---
+
+# 4. FIXED BOTTOM NAVIGATION: EXACTLY FIVE OPTIONS
+
+The application must have exactly five primary bottom navigation items.
+
+The order must be:
+
+1. Home
+2. Saved & Downloads
+3. Upload
+4. Chart
+5. Profile
+
+Use professional icons and clear labels.
+
+On mobile, keep the navigation fixed at the bottom, with enough padding to avoid overlapping content.
+
+On desktop, use the same five destinations in an appropriate responsive navigation layout.
+
+The active destination must be visually highlighted.
+
+Each option must open its own functional screen.
+
+Do not add extra primary bottom navigation options.
+
+Do not duplicate these five destinations elsewhere as separate navigation systems.
+
+Settings must be accessible from the top corner, not as a sixth bottom navigation item.
+
+---
+
+# 5. HOME
+
+The Home screen is the main content discovery area.
+
+At the top, display:
+
+* Learnerport logo.
+* Search icon or search bar.
+* Notification icon, if notifications are implemented.
+* Settings icon in the upper corner.
+* Profile photo shortcut where appropriate.
+
+Below the header, create a simple, readable content feed.
+
+Provide a compact content filter for:
+
+* All.
+* Notes.
+* Books.
+* Thoughts.
+
+Question papers and coding resources should appear in the appropriate resource categories without creating unnecessary top-level navigation options.
+
+HOME FEED:
+
+Show relevant content such as:
+
+* Recently published notes.
+* Educational books.
+* Question papers.
+* Coding tutorials.
+* Programming notes.
+* Web development resources.
+* Flutter and Dart tutorials.
+* Java, JavaScript, Python, C, and C++ resources.
+* Educational thoughts.
+* New publications from followed users.
+
+The feed must be generated from actual database records.
+
+Do not create fake users or fake content to make the feed appear populated.
+
+When a user follows someone, that person's new published content should become eligible to appear in the Home feed.
+
+Show clear resource cards containing:
+
+* Title.
+* Creator username.
+* Creator profile photo.
+* Resource type.
+* Subject or topic.
+* Short description.
+* Publication date.
+* Thumbnail, when available.
+* Views.
+* Downloads.
+* Rating, when available.
+* Comment count.
+* Save button.
+* Open or Read button.
+
+Avoid overcrowding each card with too much information.
+
+Use a clear visual hierarchy so that the title and resource type are immediately recognizable.
+
+Add pagination or load-more functionality.
+
+Provide helpful empty states when no resources are available.
+
+---
+
+# 6. GLOBAL SEARCH
+
+Search is a core feature of Learnerport.
+
+Users must be able to find educational resources and creators quickly.
+
+Create a dedicated search interface with a search field:
+
+"Search users, notes, books, or thoughts..."
+
+When the user opens search, display exactly four search category tabs:
+
+1. Users
+2. Notes
+3. Books
+4. Thoughts
+
+Do not add extra search category tabs.
+
+Question papers, coding PDFs, and programming resources must be categorized under Notes or Books according to their actual content type.
+
+QUESTION PAPER SEARCH:
+
+Users should be able to find question papers by searching from the Notes or Books category, using metadata and filters where appropriate.
+
+CODING RESOURCE SEARCH:
+
+Users should be able to find programming tutorials, coding notes, and software-development learning materials under Notes or Books.
+
+The Thoughts category must display educational and other permitted user-published thoughts.
+
+SEARCH BEHAVIOR:
+
+* Users can search by title.
+* Users can search by username.
+* Users can search by subject.
+* Users can search by topic.
+* Users can search by educational level.
+* Users can search by programming language.
+* Users can search by relevant tags.
+
+Apply filters appropriate to the selected category.
+
+For Users, display matching profiles.
+
+For Notes, display matching educational notes, coding notes, tutorials, and question papers categorized as notes where appropriate.
+
+For Books, display matching educational books, authorized PDFs, and programming books.
+
+For Thoughts, display matching published thoughts.
+
+Search must return actual database results.
+
+Include:
+
+* Search suggestions when useful.
+* Clear search action.
+* Loading state.
+* Empty state.
+* Error state.
+* Pagination.
+* Case-insensitive matching where supported.
+
+Do not return unrelated content merely to fill the screen.
+
+Do not create separate search pages for every individual subject or programming language.
+
+---
+
+# 7. NOTES LIBRARY
+
+Create a comprehensive educational notes system.
+
+Organize notes by:
+
+* Educational category.
+* Class or course.
+* Board or university.
+* Subject.
+* Chapter or topic.
+* Language.
+
+Support school classes from 1 to 12.
+
+Also support:
+
+* College courses.
+* University degrees.
+* Diploma courses.
+* Competitive examination preparation.
+* Programming and coding education.
+* Professional skill development.
+
+Examples of programming topics:
+
+* HTML.
+* CSS.
+* JavaScript.
+* TypeScript.
+* Python.
+* Java.
+* C.
+* C++.
+* Dart.
+* Flutter.
+* React.
+* Node.js.
+* Database fundamentals.
+* SQL.
+* Git and GitHub.
+* Data structures and algorithms.
+* Object-oriented programming.
+* Web development.
+* App development.
+* Backend development.
+* Frontend development.
+* Full-stack development.
+* API development.
+* Software engineering.
+* Artificial intelligence fundamentals.
+
+Allow administrators to add new subjects, technologies, and topics dynamically.
+
+Do not restrict the platform to only these examples.
+
+Each note should contain relevant metadata:
+
+* Title.
+* Description.
+* Subject.
+* Topic.
+* Class or course, when relevant.
+* Language.
+* File format.
+* File size.
+* Creator.
+* Publication date.
+* Tags.
+
+Provide:
+
+* Preview.
+* Read.
+* Authorized download.
+* Save.
+* Rating.
+* Comments.
+* Share.
+* Report.
+
+Use a consistent resource detail page.
+
+---
+
+# 8. BOOK PDF LIBRARY
+
+Create a dedicated collection of educational books and authorized PDF resources.
+
+Support:
+
+* School textbooks.
+* College textbooks.
+* University learning materials.
+* Programming books.
+* Coding tutorials in PDF format.
+* Technology learning resources.
+* Competitive examination preparation books.
+* Other authorized educational PDFs.
+
+Allow filtering by:
+
+* Title.
+* Author.
+* Subject.
+* Course.
+* Educational level.
+* Language.
+* Topic.
+* Publication year, when known.
+
+Each book must have a detail page with:
+
+* Book title.
+* Cover image, if available.
+* Description.
+* Author, if known.
+* Subject or topic.
+* Language.
+* File format.
+* File size.
+* Uploader username.
+* Publication date.
+* View count.
+* Download count.
+* Average rating, if ratings exist.
+* Number of ratings.
+* Comments.
+
+PDF READER:
+
+Implement an in-browser PDF reader with:
+
+* Page navigation.
+* Zoom controls.
+* Page number.
+* Full-screen mode where supported.
+* Fit-to-width or equivalent viewing option.
+* Authorized download option.
+
+Handle missing files, invalid PDFs, and failed loading gracefully.
+
+Do not claim a PDF is available when its file cannot be accessed.
+
+Respect copyright and distribution permissions.
+
+---
+
+# 9. QUESTION PAPERS
+
+Question papers must be discoverable through the existing Notes and Books sections, using search and relevant filters.
+
+Do not create a sixth primary navigation item.
+
+Support:
+
+* Previous-year papers.
+* Official sample papers.
+* Model papers.
+* Practice papers.
+* Mock tests.
+* Independently created demo papers.
+
+Store relevant metadata:
+
+* Educational level.
+* Class or course.
+* Board or university.
+* Subject.
+* Examination year.
+* Semester.
+* Language.
+* Paper type.
+* Source or attribution, where available.
+
+Clearly label independently created demo papers.
+
+Never represent an unverified practice paper as an official examination paper.
+
+Allow authorized PDF preview and download.
+
+---
+
+# 10. THOUGHTS
+
+Create a community publishing system for user-generated thoughts.
+
+Users must be able to:
+
+* Write a thought.
+* Add an optional title.
+* Add relevant tags.
+* Add an optional image.
+* Publish the thought.
+* Edit their own thoughts.
+* Delete their own thoughts.
+* Like and unlike thoughts.
+* Comment on thoughts.
+* Save thoughts.
+* Share thoughts.
+* Report inappropriate content.
+
+Display:
+
+* Author profile photo.
+* Username.
+* Publication date.
+* Thought content.
+* Topic tags.
+* Like count.
+* Comment count.
+* Save action.
+* Share action.
+
+Only show real interaction counts.
+
+Prevent duplicate likes from the same user on the same thought.
+
+Use database-backed comments and likes.
+
+Provide moderation and reporting controls.
+
+---
+
+# 11. FOLLOWERS AND FOLLOWING
+
+Implement a real follow system.
+
+Each user can:
+
+* Follow another user.
+* Unfollow another user.
+* View their followers.
+* View accounts they follow.
+* Open a follower's profile.
+* Open a followed user's profile.
+
+Display follower and following counts on the user's profile.
+
+Prevent:
+
+* Following the same user multiple times.
+* Following oneself.
+* Duplicate follow records.
+
+FOLLOW FEED BEHAVIOR:
+
+When a user follows another creator, new public content published by that creator should become eligible to appear in the follower's Home feed.
+
+This must include relevant publications such as:
+
+* Notes.
+* Book PDFs.
+* Coding resources.
+* Question papers.
+* Thoughts.
+
+The user must not need to manually visit each followed profile to discover new uploads.
+
+Follow relationships must persist after logout and login.
+
+Do not add unnecessary social features such as elaborate follower leaderboards.
+
+The follow system should support educational discovery, not distract from learning.
+
+---
+
+# 12. SAVED & DOWNLOADS
+
+This is the second bottom navigation destination.
+
+Create one organized page with two clearly distinguishable tabs:
+
+* Saved.
+* Downloads.
+
+Do not create two separate bottom navigation buttons for them.
+
+SAVED:
+
+Display resources that the user has explicitly bookmarked.
+
+Support:
+
+* Notes.
+* Books.
+* Thoughts.
+* Question papers.
+
+Allow users to remove items from Saved.
+
+DOWNLOADED:
+
+Display the user's download history for resources accessed through the application.
+
+Where the platform can reliably track a completed download, record it.
+
+Clearly distinguish:
+
+* Download history.
+* Files that are actually stored locally, if the platform supports verifying this.
+
+Do not claim a file remains on the device when that cannot be verified.
+
+Allow users to reopen the resource detail page and download it again when permitted.
+
+Organize saved and downloaded resources with:
+
+* Search.
+* Resource type.
+* Date.
+* Clear empty states.
+
+Keep private collections restricted to their owners.
+
+---
+
+# 13. UPLOAD
+
+The third bottom navigation destination must open the central publishing screen.
+
+Display exactly four main publishing choices:
+
+1. Upload Notes.
+2. Upload Book PDF.
+3. Upload Question Paper.
+4. Publish Thought.
+
+Users must not have to navigate through unrelated pages to publish content.
+
+DOCUMENT UPLOAD FORM:
+
+Include:
+
+* Title.
+* Description.
+* Subject or topic.
+* Educational level, when applicable.
+* Language.
+* Relevant tags.
+* Optional thumbnail.
+* File selection.
+* Copyright or authorization confirmation.
+
+For question papers, additionally collect:
+
+* Examination year, if known.
+* Board or university, when relevant.
+* Paper type.
+* Class, course, or semester, when applicable.
+
+For programming resources, provide appropriate topic metadata, such as:
+
+* Programming language.
+* Technology.
+* Skill level.
+* Learning topic.
+
+Do not require irrelevant fields for every upload.
+
+THOUGHT UPLOAD FORM:
+
+Include:
+
+* Thought text.
+* Optional title.
+* Optional image.
+* Optional tags.
+* Publish button.
+
+FILE HANDLING:
+
+* Support permitted PDF uploads.
+* Support image uploads where needed.
+* Validate file type and file size.
+* Use actual file storage.
+* Show upload progress where supported.
+* Handle failed uploads.
+* Prevent duplicate submissions.
+* Store the uploaded file reference and metadata.
+* Provide clear success and failure messages.
+
+After publishing, show the new resource and provide a way to open it.
+
+Add a My Uploads management area within the user's profile or another suitable existing screen. Do not add another bottom navigation item.
+
+Allow users to edit or delete their own content.
+
+---
+
+# 14. CHART — PERSONAL CONTENT ANALYTICS
+
+The fourth bottom navigation destination is named **Chart**.
+
+This section allows users to analyze the performance of content they have published.
+
+It is not a general educational chart gallery.
+
+Show only content belonging to the currently authenticated user, unless the user has authorized administrative access.
+
+At the top, provide a summary of the user's published content.
+
+Display real metrics such as:
+
+* Total published resources.
+* Total views.
+* Total completed downloads recorded by the application.
+* Total ratings.
+* Average rating.
+* Total comments.
+* Total likes, where applicable.
+
+Provide a list of the user's published resources.
+
+Each resource row or card should show:
+
+* Resource title.
+* Content type.
+* Publication date.
+* Views.
+* Downloads.
+* Average rating.
+* Rating count.
+* Comment count.
+
+When the user selects a resource, open a detailed analytics view.
+
+RESOURCE ANALYTICS:
+
+Display:
+
+* Total views.
+* Download count.
+* Average rating.
+* Number of ratings.
+* Rating distribution, when enough data exists.
+* Total comments.
+* Recent comments.
+* Engagement over time, when sufficient timestamped data exists.
+
+Use suitable charts and graphs.
+
+Examples:
+
+* Views over time.
+* Downloads over time.
+* Rating distribution.
+* Comments over time.
+
+Do not create charts from invented data.
+
+If there is not enough data for a graph, display an appropriate empty state.
+
+RATINGS:
+
+Allow authenticated users to rate eligible resources on a scale of 1 to 5.
+
+Allow one current rating per user per resource.
+
+Users may update their own rating.
+
+Calculate the average rating from real stored ratings.
+
+Show the number of ratings alongside the average.
+
+COMMENTS:
+
+Allow users to comment on resources.
+
+Resource owners can see comments on their resources.
+
+Provide appropriate controls for reporting or moderating inappropriate comments.
+
+The Chart page must never reveal private analytics belonging to another ordinary user.
+
+Do not show another user's private performance information.
+
+---
+
+# 15. PROFILE
+
+The fifth bottom navigation destination is Profile.
+
+Create a polished user profile.
+
+Display:
+
+* Profile photo.
+* Display name.
+* Unique username.
+* Bio.
+* Followers count.
+* Following count.
+* Published content count.
+* Relevant public contribution statistics.
+
+Include profile actions:
+
+* Edit Profile.
+* View Followers.
+* View Following.
+* View My Uploads.
+
+Provide a clean content collection for the user's public publications.
+
+Users should be able to browse their own:
+
+* Notes.
+* Books.
+* Thoughts.
+* Question papers.
+* Coding resources.
+
+Organize them using simple tabs or filters inside the profile.
+
+Do not add a new primary bottom navigation option for each content type.
+
+PROFILE EDITING:
+
+Allow the owner to:
+
+* Change profile photo.
+* Change username.
+* Change display name.
+* Edit bio.
+* Update educational interests.
+* Update other supported profile fields.
+
+Validate changes and save them to the database.
+
+Do not expose private email addresses or internal authentication IDs.
+
+---
+
+# 16. SETTINGS IN THE TOP CORNER
+
+Place a Settings icon in the upper corner of the application header.
+
+This icon must open the Settings page or panel.
+
+Do not add Settings as a sixth bottom navigation item.
+
+Include the following settings, where supported:
+
+ACCOUNT:
+
+* Edit profile.
+* Change username.
+* Change profile photo.
+* Change password through the authentication provider.
+* Manage account.
+* Logout.
+
+APPEARANCE:
+
+* Light mode.
+* Dark mode.
+* System default.
+
+PREFERENCES:
+
+* Preferred language.
+* Educational interests.
+* Preferred topics.
+* Reading preferences.
+
+NOTIFICATIONS:
+
+* Publication updates.
+* Relevant comments.
+* Account messages.
+* Other useful notifications.
+
+PRIVACY:
+
+* Public profile visibility.
+* Account data controls.
+* Account deletion request.
+
+ABOUT:
+
+* About Learnerport.
+* Privacy Policy.
+* Terms and Conditions.
+* Copyright policy.
+* Help and Support.
+
+Persist settings where appropriate.
+
+Do not show controls for features that do not actually exist.
+
+---
+
+# 17. NOTIFICATIONS
+
+Implement useful notifications for genuine events.
+
+Examples:
+
+* A followed user publishes new content.
+* Someone comments on the user's content.
+* Someone rates the user's resource.
+* A resource upload succeeds.
+* A resource is approved or rejected, if moderation is enabled.
+
+Allow users to:
+
+* View notifications.
+* Mark notifications as read.
+* Mark all as read.
+* Open the related resource.
+
+Do not generate fake notifications.
+
+Respect the user's notification preferences.
+
+---
+
+# 18. ADMINISTRATION AND CONTENT MODERATION
+
+Implement a protected administrative interface using the existing authentication and authorization system.
+
+Only authorized administrators may access administrative functions.
+
+Administrators should be able to:
+
+* Manage educational categories.
+* Manage subjects and topics.
+* Review reported content.
+* Review content requiring approval.
+* Remove content that violates platform rules.
+* Review copyright complaints.
+* Manage users where authorized.
+* Configure supported upload formats and limits.
+* Review real platform statistics.
+
+Do not allow users to make themselves administrators by editing their profile.
+
+Protect administrative operations on the server.
+
+---
+
+# 19. DATABASE AND DATA RELATIONSHIPS
+
+Design a reliable data model appropriate for the selected technology stack.
+
+Include entities equivalent to:
+
+* UserProfiles.
+* Resources.
+* Thoughts.
+* Follows.
+* SavedResources.
+* DownloadEvents.
+* ResourceViews.
+* ResourceRatings.
+* ResourceComments.
+* ThoughtLikes.
+* ThoughtComments.
+* Notifications.
+* ContentReports.
+* EducationalCategories.
+* UserPreferences.
+* AdministrativeAuditLogs.
+
+Use appropriate relationships and unique constraints.
+
+Examples:
+
+* Usernames must be unique.
+* A user must not follow the same user twice.
+* A user must not like the same thought twice.
+* A user must have only one current rating per resource.
+* A user must not save the same resource multiple times.
+
+Store view, download, rating, and comment events consistently.
+
+Avoid creating duplicate records for the same action.
+
+Use timestamps for meaningful analytics.
+
+Apply pagination to large collections.
+
+Adapt these entities to the database system actually supported by the selected development environment.
+
+---
+
+# 20. SECURITY AND PERMISSIONS
+
+Implement real authorization and secure data access.
+
+Users must be able to:
+
+* Read published public resources.
+* Publish their own content.
+* Edit their own content.
+* Delete their own content.
+* Manage their own profile.
+* View their own private analytics.
+* Manage their own saved and downloaded collections.
+
+Users must not be able to:
+
+* Modify another user's profile without permission.
+* Edit or delete another user's content.
+* Read another user's private analytics.
+* Access private account settings belonging to another user.
+* Grant themselves administrative privileges.
+* Bypass file access restrictions.
+
+Validate permissions on the server, not only in the frontend.
+
+Validate uploaded files.
+
+Sanitize user-generated content.
+
+Protect sensitive credentials.
+
+Use secure authentication sessions.
+
+Do not expose private storage credentials.
+
+Apply reasonable rate limits where supported.
+
+---
+
+# 21. FILE STORAGE AND COPYRIGHT
+
+Use actual file storage for uploaded PDFs and images.
+
+Implement:
+
+* Upload validation.
+* File-size limits.
+* Appropriate file access permissions.
+* Error handling.
+* Safe file deletion.
+* Document preview where supported.
+
+Do not use fabricated file links.
+
+Do not display broken files as working downloads.
+
+Users must confirm they have permission to publish materials they upload.
+
+Support original content, appropriately licensed educational resources, authorized publications, and public-domain materials.
+
+Provide a reporting mechanism for copyright complaints.
+
+---
+
+# 22. USER EXPERIENCE
+
+Make the application extremely easy to understand.
+
+The main actions should be obvious.
+
+Use:
+
+* Clear buttons.
+* Readable resource cards.
+* Consistent navigation.
+* Responsive layouts.
+* Useful loading indicators.
+* Helpful error messages.
+* Confirmation dialogs for destructive actions.
+* Appropriate empty states.
+* Accessible forms.
+* Keyboard navigation where relevant.
+
+Avoid:
+
+* Too many menus.
+* Duplicate options.
+* Unnecessary popups.
+* Excessive animations.
+* Cluttered cards.
+* Unrelated features.
+* Decorative buttons that do nothing.
+
+The application should feel lightweight even when the database contains many resources.
+
+---
+
+# 23. IMPLEMENTATION REQUIREMENTS
+
+Choose the best practical technology stack supported by the development environment.
+
+If using Google AI Studio to generate the code, organize the project into maintainable components and modules rather than placing the entire production application into one enormous file.
+
+Use a suitable:
+
+* Frontend framework.
+* Backend or server-side service.
+* Database.
+* Authentication provider.
+* File storage system.
+* PDF viewing solution.
+* Charting library.
+
+Use real integrations instead of simulated operations.
+
+Do not expose secret API keys in client-side code.
+
+If external configuration is required, document it clearly.
+
+If a required capability is unavailable, explain the limitation and implement the best safe alternative.
+
+Ensure the application can be run and tested locally.
+
+Provide clear setup instructions and a list of required environment variables without exposing their secret values.
+
+---
+
+# 24. REQUIRED TESTING
+
+Before declaring the application complete, verify these workflows:
+
+1. Register a new user.
+2. Sign in with email.
+3. Test Google authentication after configuration.
+4. Test Apple authentication after configuration.
+5. Complete the initial profile setup once.
+6. Change the username.
+7. Change the profile photo.
+8. Open all five bottom navigation destinations.
+9. Search for users.
+10. Search for notes.
+11. Search for books.
+12. Search for thoughts.
+13. Find coding resources.
+14. Find question papers through the supported search categories.
+15. Upload a PDF.
+16. Open the PDF reader.
+17. Download an authorized resource.
+18. Save a resource.
+19. View the Saved collection.
+20. View the Downloads history.
+21. Publish a thought.
+22. Like and comment on a thought.
+23. Follow another user.
+24. Verify that followed users' new publications can appear in the Home feed.
+25. Rate a resource.
+26. Verify that the rating is reflected in the correct analytics.
+27. Verify that views and downloads are recorded consistently.
+28. Verify that comments appear in the resource analytics.
+29. Edit and delete one's own resource.
+30. Verify that another user cannot edit or delete that resource.
+31. Verify that private analytics are protected.
+32. Test light and dark modes.
+33. Test settings persistence.
+34. Test mobile responsiveness.
+35. Test upload failures and invalid files.
+36. Test empty states and loading states.
+37. Test administrative permissions.
+38. Verify that no fake metrics are shown.
+39. Verify that no duplicate primary navigation items exist.
+40. Fix major errors discovered during testing.
+
+---
+
+# FINAL INSTRUCTION
+
+Build Learnerport as a complete educational content-sharing application.
+
+Keep the bottom navigation fixed to exactly these five destinations:
+
+**Home | Saved & Downloads | Upload | Chart | Profile**
+
+Keep Settings in the upper corner.
+
+Keep search categories fixed to exactly these four:
+
+**Users | Notes | Books | Thoughts**
+
+Include coding and programming educational resources inside Notes and Books, not as unnecessary extra navigation sections.
+
+Implement real user profiles, editable usernames, profile photos, followers, following, content publishing, resource ratings, comments, views, downloads, and personal analytics.
+
+Use your best judgment to create the most polished, maintainable, secure, and useful implementation possible.
+
+Prioritize correct functionality and data integrity over superficial appearance.
+
+The final product must be named **Learnerport**, with "Learner" in blue and "port" in black.

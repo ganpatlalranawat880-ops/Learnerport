@@ -1,0 +1,762 @@
+# COMPLETE APP DEVELOPMENT AND IMPROVEMENT PROMPT
+
+Upgrade and improve my existing application according to all the requirements below. Do not create an unrelated application or remove any existing working features unless specifically instructed. First understand the current project structure, then implement all changes carefully. The final application must be fully functional, responsive, secure, and professionally designed.
+
+## 1. PREMIUM UI/UX DESIGN
+
+Design the entire application with an elegant, premium Apple iOS-inspired interface. The app should feel luxurious, modern, clean, smooth, and professionally developed.
+
+Design requirements:
+
+* Use a slim, elegant layout inspired by premium iOS applications.
+* Maintain consistent spacing, typography, rounded corners, icons, buttons, cards, and navigation.
+* Use smooth animations and transitions without making the application slow.
+* Keep the interface simple, attractive, and easy for students to understand.
+* Use professional SVG icons or Lucide icons instead of unnecessary emojis.
+* Ensure that every screen looks polished and consistent.
+* Make the application fully responsive across mobile phones, tablets, and desktop screens.
+* Avoid oversized buttons, unnecessary empty spaces, cluttered layouts, and duplicate options.
+* Optimize the interface for a smooth mobile-first experience.
+
+### Logo Requirements
+
+Use only the original application logo.
+
+* Display the logo without any white background, unwanted border, or extra background box.
+* Use a transparent logo asset wherever the logo appears.
+* Do not place the logo inside a white rectangle when the surrounding interface is dark or colored.
+* Preserve the original logo design and proportions.
+* Ensure that the logo looks clean in both light mode and dark mode.
+
+## 2. ONLY TWO THEMES: LIGHT MODE AND DARK MODE
+
+The application must have exactly two appearance modes:
+
+1. Light Mode
+2. Dark Mode
+
+### Default Appearance
+
+* The application must always use Light Mode by default for a new installation or a new user who has not selected a theme.
+* The entire application should initially open in Light Mode.
+* Do not automatically switch to Dark Mode based on the device's system settings.
+
+### User-Controlled Theme
+
+* Add a clear theme selection option in Settings.
+* Users can manually switch between Light Mode and Dark Mode.
+* Once a user selects a theme, save that preference locally on their device.
+* Keep the selected theme after closing and reopening the application.
+* If a user has already selected Dark Mode, do not reset their preference to Light Mode every time they open the app.
+* Use appropriate colors, text contrast, icons, borders, cards, and backgrounds for each theme.
+
+Do not introduce any additional themes, such as AMOLED Mode, Blue Mode, or Automatic Mode.
+
+## 3. REAL USER ACCOUNTS ONLY
+
+Remove all fake accounts, demo profiles, fabricated user information, fake activity, and simulated social statistics from the application.
+
+The application must use a genuine user account system.
+
+Requirements:
+
+* Implement real user registration and login.
+* Support genuine Google Sign-In if properly configured.
+* Support email and password authentication.
+* Include Forgot Password functionality.
+* Validate all registration fields before allowing account creation.
+* Prevent duplicate accounts where supported by the authentication system.
+* Show only real registered users in the application.
+* Display real profile information supplied by users.
+* Display actual posts, notes, books, question papers, and thoughts uploaded by users.
+* Never generate fake users to fill empty screens.
+* Never display fabricated ratings, followers, following counts, downloads, or engagement statistics.
+* Display a proper empty state when genuine data is unavailable.
+* Make sure that logging out and logging back in restores the correct user's data.
+
+Do not mark demo data as real user data.
+
+If the project currently contains sample accounts or dummy content, remove those entries from the production experience and replace them with actual backend data.
+
+## 4. REGISTRATION AND PROFILE SETUP
+
+Users must complete the required registration process before accessing features that require an account.
+
+### Registration Options
+
+Provide:
+
+* Create Account
+* Sign In
+* Continue with Google, when configured
+* Forgot Password
+* Terms and Conditions acceptance
+
+### Required Profile Setup
+
+After successful registration, ask the user to complete their profile.
+
+Include the following fields:
+
+1. Full Name
+2. Unique Username
+3. Date of Birth
+4. Profile Photograph
+5. Educational Qualification
+6. Current Class, Course, or Degree
+7. Optional Educational Institution
+8. Optional Bio
+
+Validate the required fields and save the information to the correct user profile.
+
+Do not repeatedly ask users to complete their profiles after they have already finished the required setup.
+
+### Profile Photograph
+
+Users must be able to choose a profile picture in two ways:
+
+* Take a photograph using their phone's camera.
+* Choose an existing image from their phone's gallery.
+
+On supported devices, request camera permission only when necessary.
+
+Allow users to preview and confirm their selected image before saving it.
+
+Also provide an option to change or remove the profile picture.
+
+Use genuine uploaded profile photographs and do not generate fake profile pictures for real users.
+
+## 5. HOME PAGE AND PREMIUM BANNER
+
+Create an attractive, premium home page with a well-designed banner at the top.
+
+### Home Page Banner
+
+The banner should:
+
+* Have an elegant and modern design.
+* Look visually attractive without overwhelming the interface.
+* Introduce the application's educational purpose.
+* Display a short, meaningful heading and supporting text.
+* Use professional typography and appropriate illustrations or graphics.
+* Be responsive across mobile and desktop screens.
+
+The banner may use an advertisement-style visual design, but it must not display fake advertisements, fake sponsored content, or fabricated promotional claims.
+
+If actual advertisements are integrated in the future, display them only when a genuine ad provider supplies them.
+
+### Home Page Categories
+
+Provide the following main sections:
+
+1. Notes
+2. Book PDFs
+3. Question Papers
+4. Thoughts
+
+Each section must display relevant content only.
+
+For example:
+
+* Notes should display notes.
+* Book PDFs should display books.
+* Question Papers should display question papers.
+* Thoughts should display published thoughts.
+
+Do not mix unrelated uploads into the wrong category.
+
+## 6. GLOBAL SEARCH BAR
+
+Add a premium search bar near the top of the home page.
+
+Users must be able to search for:
+
+* Notes
+* Books and PDFs
+* Question Papers
+* Thoughts
+* Subjects
+* Classes
+* Courses and degrees
+* Relevant educational topics
+* Public user profiles, where appropriate
+
+### Search Functionality
+
+* Search should return genuine results from the backend.
+* Implement useful filters for content type, class, subject, course, and other relevant fields.
+* Display relevant results based on the search query.
+* Include a clear-search button.
+* Show a professional empty state when no matching results are found.
+* Do not display fake search results.
+
+Searching for a question paper must return matching question papers, not unrelated notes or books.
+
+## 7. NOTES, BOOK PDFs, AND QUESTION PAPERS
+
+Create separate, fully functional sections for Notes, Book PDFs, and Question Papers.
+
+### PDF Upload Requirements
+
+Users must be able to select PDF files directly from their phone or computer.
+
+Use the device's native file picker wherever supported.
+
+The upload process should allow users to:
+
+1. Select the appropriate content category.
+2. Choose a PDF file from their device.
+3. Enter the title.
+4. Enter a description.
+5. Select the relevant class or course.
+6. Select the subject.
+7. Add other relevant academic details.
+8. Choose a suitable cover.
+9. Preview the information.
+10. Publish the content after validation.
+
+### Category-Specific Upload Forms
+
+Keep the upload interface clean and relevant.
+
+For Notes:
+
+* Notes title
+* Class or course
+* Subject
+* Description
+* PDF file
+* Cover selection
+* Optional language and academic year
+
+For Book PDFs:
+
+* Book title
+* Author, where applicable
+* Class or course
+* Subject
+* Description
+* PDF file
+* Cover selection
+* Relevant publication information
+
+For Question Papers:
+
+* Question paper title
+* Class or course
+* Subject
+* Examination type
+* Examination year
+* Board or university, where applicable
+* PDF file
+* Cover selection
+* Optional description
+
+For Thoughts:
+
+* Thought title, if applicable
+* Thought text
+* Optional relevant image
+* Author information
+
+Only display the fields relevant to the selected content category.
+
+Do not show PDF upload fields in the Thought publishing form unless a separate, explicitly supported feature requires them.
+
+### File Validation
+
+* Validate file type and size before uploading.
+* Handle failed uploads gracefully.
+* Display upload progress where supported.
+* Prevent incomplete uploads from appearing as published content.
+* Allow users to cancel an upload.
+* Show a success message after a successful publication.
+* Provide appropriate error messages when a file cannot be uploaded or opened.
+
+## 8. CUSTOM PDF COVER SELECTION
+
+Users must be able to select a suitable cover for their Notes, Book PDFs, and Question Papers.
+
+Provide two options:
+
+1. Choose an image from the device gallery or files.
+2. Select from professionally designed, category-specific cover templates.
+
+### Cover Design
+
+Create attractive templates for:
+
+* Educational Notes
+* Books
+* Question Papers
+
+Each cover should have an appropriate layout, readable typography, and a premium appearance.
+
+Allow the user to preview the selected cover before publishing.
+
+Where supported, generate a PDF preview using the actual PDF content. If the user selects a separate cover image, use it as the content's thumbnail or first-page cover according to the supported implementation.
+
+Do not modify or replace the original PDF content without the user's consent.
+
+The cover image must be stored correctly and displayed consistently in content cards and detail pages.
+
+## 9. PDF VIEWING, DOWNLOADING, AND SHARING
+
+Every published PDF must have a proper detail page.
+
+Provide the following options wherever applicable:
+
+* Open PDF
+* Read PDF
+* Download PDF
+* Share PDF
+* View uploader profile
+* Save PDF
+* Report content
+* Delete or edit the user's own upload
+
+### Native Device Sharing
+
+Implement the device's native sharing functionality.
+
+When a user taps Share:
+
+* Open the operating system's native share sheet.
+* On supported devices, show available apps such as WhatsApp, email, Bluetooth, or other compatible sharing targets.
+* Allow users to share the original PDF file when supported and permitted.
+* If sharing the file is not supported, allow sharing an appropriate link to the published content.
+
+Use the device's native sharing interface rather than creating an unnecessary custom social-sharing screen.
+
+Do not pretend that a file has been shared if the operating system or sharing target reports a failure.
+
+Apply the same native sharing approach to the application's Share App option.
+
+## 10. THOUGHT PUBLISHING SYSTEM
+
+Create a separate Thought section where registered users can publish their own thoughts.
+
+Users should be able to:
+
+* Write and publish thoughts.
+* Add an optional title.
+* Edit their own thoughts.
+* Delete their own thoughts.
+* View thoughts published by other genuine users.
+* Visit the author's profile.
+* Save a thought where supported.
+* Report inappropriate or unauthorized content.
+
+Display the author's genuine profile picture, name, username, and thought publication date.
+
+Do not generate fake thoughts or fake author information.
+
+## 11. USER PROFILE PAGE
+
+Create a premium profile page for every registered user.
+
+Display:
+
+* Profile photograph
+* Full name
+* Username
+* Bio
+* Educational qualification
+* Current class, course, or degree
+* Optional educational institution
+* Published Notes
+* Published Book PDFs
+* Published Question Papers
+* Published Thoughts
+* Followers
+* Following
+
+Users must be able to edit their own profile information.
+
+Do not allow users to modify another person's profile without authorization.
+
+### Profile Bio
+
+Allow users to write and update their own bio.
+
+Provide appropriate length limits and validation.
+
+### Profile Content
+
+Display the user's published content in properly organized sections.
+
+Only show genuine content associated with that user.
+
+Do not display fabricated achievements, qualifications, or account activity.
+
+## 12. REAL FOLLOWERS AND FOLLOWING
+
+Implement a genuine follow system.
+
+Important requirements:
+
+* Remove fake followers and fake following counts.
+* Never artificially increase follower numbers.
+* Store follow relationships in the backend.
+* Prevent a user from following the same account multiple times.
+* Prevent users from following themselves.
+* Keep follower and following counts synchronized with actual database records.
+* Update the interface after a successful follow or unfollow action.
+
+### Followers List
+
+When a user clicks Followers, open a page or panel displaying the genuine list of users who follow that account.
+
+### Following List
+
+When a user clicks Following, display the genuine list of accounts that the user follows.
+
+Each entry should show:
+
+* Actual profile picture
+* Actual name
+* Actual username
+* Appropriate profile navigation
+
+Allow users to visit those profiles.
+
+If the list is empty, display a clear empty state instead of dummy profiles.
+
+## 13. SECURITY SETTINGS: APP LOCK PIN
+
+Add a dedicated security section in Settings.
+
+Include an option named:
+
+App Lock / Security PIN
+
+### Functionality
+
+* Users can create a personal PIN to protect access to the application.
+* Allow users to confirm their PIN during setup.
+* Ask for the PIN when reopening the application if App Lock is enabled.
+* Provide a way to change or disable the PIN after appropriate verification.
+* Include a secure PIN recovery or reset process.
+* Do not store the PIN as plain text.
+* Use secure platform storage and an appropriate verification mechanism.
+* Avoid exposing the PIN in logs, error messages, or analytics.
+* Handle repeated incorrect PIN attempts safely.
+
+If supported by the platform, optionally provide biometric unlocking as an additional convenience. However, the PIN must remain the primary feature requested here.
+
+The App Lock PIN must be separate from the user's account password.
+
+Do not claim that App Lock provides complete protection against every form of device-level access.
+
+## 14. SETTINGS PAGE
+
+Create a premium Settings screen with the following options:
+
+1. Account Settings
+2. Edit Profile
+3. Appearance
+4. Light Mode
+5. Dark Mode
+6. Security PIN / App Lock
+7. Main Information
+8. About App
+9. Terms and Conditions
+10. Privacy Policy
+11. Help and Support
+12. Share App
+13. Logout
+
+Only show options that are properly implemented.
+
+Do not create buttons that lead to blank screens or non-functional pages.
+
+### Important Restriction
+
+Do not add Supabase Cloud Sync as a setting or user-facing feature.
+
+There must be no Supabase Cloud Sync toggle, button, menu item, or promotional message.
+
+If Supabase is used internally for authentication, database storage, or file storage, it must operate as the application's backend infrastructure rather than as a user-facing cloud synchronization feature.
+
+Do not claim that data is synchronized across devices unless that functionality is actually implemented.
+
+## 15. MAIN INFORMATION: UPLOAD PERMISSIONS AND RESPONSIBILITY
+
+Add a dedicated option inside Settings named:
+
+Main Information
+
+When users open this section, display the following notice clearly and professionally.
+
+Use the Hindi notice below without changing its meaning:
+
+"महत्वपूर्ण सूचना एवं अपलोड संबंधी जिम्मेदारी
+
+इस एप्लिकेशन पर किसी भी पुस्तक, नोट्स, प्रश्नपत्र, PDF, फोटो या अन्य सामग्री को अपलोड करने से पहले यह सुनिश्चित करना आवश्यक है कि आपके पास उसे अपलोड और साझा करने का उचित अधिकार या अनुमति है।
+
+यदि कोई उपयोगकर्ता किसी अन्य व्यक्ति, लेखक, प्रकाशक, संस्था या संगठन की पुस्तक, नोट्स, PDF अथवा किसी अन्य कॉपीराइट-संरक्षित सामग्री को संबंधित अधिकारधारी की अनुमति के बिना अपलोड या साझा करता है, तो इसके लिए संबंधित अपलोडर स्वयं जिम्मेदार होगा।
+
+इसलिए किसी भी अन्य व्यक्ति की PDF, पुस्तक, नोट्स या अन्य संरक्षित सामग्री अपलोड करने से पहले संबंधित अधिकारधारी की अनुमति प्राप्त करना आवश्यक है, जब तक कि सामग्री को साझा करने की अनुमति किसी लागू लाइसेंस, कानून या अन्य वैध आधार के अंतर्गत पहले से उपलब्ध न हो।
+
+केवल इंटरनेट पर उपलब्ध होने के कारण किसी सामग्री को स्वतंत्र रूप से अपलोड या वितरित करने का अधिकार प्राप्त नहीं हो जाता।
+
+उपयोगकर्ताओं को केवल अपनी बनाई हुई सामग्री, अधिकृत सामग्री, उचित अनुमति से प्राप्त सामग्री, या वैध रूप से साझा की जा सकने वाली सामग्री ही प्रकाशित करनी चाहिए।
+
+यदि किसी सामग्री के अधिकार या अनुमति के संबंध में संदेह हो, तो उसे अपलोड करने से पहले संबंधित अधिकारधारी से पुष्टि करें।
+
+कॉपीराइट शिकायत, सामग्री हटाने, रिपोर्ट करने और संबंधित नीतियों के लिए एप्लिकेशन में उपलब्ध सहायता एवं रिपोर्टिंग विकल्पों का उपयोग करें।
+
+— By Satish Ranawat"
+
+Display this information in a readable layout with proper spacing and typography.
+
+The notice should remain accessible from Settings at all times.
+
+Also provide an appropriate content-reporting mechanism so users can report suspected copyright infringement or unauthorized uploads.
+
+Do not assume that a notice alone automatically removes all legal responsibility from the application operator. Implement a reasonable reporting and content-review process as well.
+
+## 16. ABOUT APP: COMPLETE APPLICATION INFORMATION
+
+Create a detailed About App page that explains the application's purpose, features, and usage.
+
+The About App page must be written in professional English.
+
+Include the following sections:
+
+### About the Application
+
+Explain that the application is designed to help students and learners discover, read, organize, and share educational resources in one convenient place.
+
+### Main Features
+
+Describe all implemented features, including:
+
+* Educational Notes
+* Book PDFs
+* Previous-Year Question Papers
+* Educational Thoughts
+* PDF Uploading
+* PDF Reading
+* PDF Downloading
+* Native PDF Sharing
+* Custom PDF Covers
+* Global Search
+* Class and Subject Organization
+* User Registration and Authentication
+* Personalized User Profiles
+* Profile Photographs
+* Educational Qualifications
+* User Bios
+* Publishing and Managing Content
+* Real Followers and Following
+* Profile and Content Discovery
+* Light Mode
+* Dark Mode
+* App Lock PIN
+* Account Security
+* Content Reporting
+* Copyright and Permission Information
+* Device-Based Sharing
+* Responsive Premium Interface
+
+Mention only features that are genuinely implemented and functional in the final application.
+
+### User Community
+
+Explain that the platform allows genuine registered users to publish educational content and share original thoughts.
+
+State that the application does not intentionally use fabricated followers, fake profiles, or fake engagement statistics.
+
+### Responsible Publishing
+
+Explain that users must respect intellectual property rights and obtain the necessary permissions before publishing material belonging to others.
+
+### Privacy and Security
+
+Explain the actual privacy and security practices implemented by the application. Do not make unsupported promises about complete security, anonymity, or data protection.
+
+### Final Signature
+
+At the very bottom of the About App page, display this exact text:
+
+By Satish Ranawat
+
+The signature must appear at the end of the page, after all other About App information.
+
+Use elegant typography and appropriate spacing.
+
+## 17. SHARE APP FEATURE
+
+Add a Share App option in Settings.
+
+When selected, open the device's native sharing interface.
+
+Allow users to share:
+
+* The application's genuine store link, if available.
+* The official application website, if available.
+* A simple application introduction.
+* An appropriate installation link.
+
+Use only genuine configured links.
+
+Do not create fake download links, fabricated app store listings, or nonexistent websites.
+
+If the application has not yet been published, provide a suitable development-stage sharing message or use a configured official project link.
+
+## 18. REAL DATA AND BACKEND REQUIREMENTS
+
+The application must operate on real data rather than a frontend-only simulation.
+
+Use the existing backend if it is already configured and working.
+
+If Supabase is the selected backend, configure it properly for:
+
+* Authentication
+* User profiles
+* Notes and educational resources
+* Book PDF metadata
+* Question paper metadata
+* Thought posts
+* Follower and following relationships
+* Content ownership
+* PDF and cover-image storage
+* Reporting and moderation records
+
+Do not introduce Supabase Cloud Sync as a user-facing feature.
+
+### Database Requirements
+
+Create or update the necessary database tables and relationships.
+
+Use appropriate identifiers, timestamps, validation, and ownership fields.
+
+Enforce permissions on the server or through database security policies.
+
+Examples:
+
+* A user can edit only their own profile.
+* A user can edit or delete only content they own, subject to moderation and applicable administrative controls.
+* A user cannot create a follow relationship on behalf of another user.
+* Private account information must not be publicly exposed.
+* Uploaded files must be associated with the correct user and content record.
+* Unauthenticated users must not be able to perform protected publishing actions.
+
+If public content is intended to be visible without login, permit public reading while requiring authentication for publishing, following, saving, and other protected actions.
+
+### File Storage
+
+Use suitable storage for uploaded PDFs and cover images.
+
+Implement access controls, file validation, file-size limits, and appropriate upload permissions.
+
+Never expose secret backend keys in frontend code.
+
+Do not simulate successful uploads when storage is unavailable.
+
+## 19. REAL USER EXPERIENCE AND EMPTY STATES
+
+Remove all fake content and placeholder activity from the production interface.
+
+If a section has no real content, display an attractive empty state.
+
+Examples:
+
+* No notes available yet.
+* No books have been published yet.
+* No question papers found.
+* No thoughts published yet.
+* No followers yet.
+* Not following anyone yet.
+
+Provide relevant actions where appropriate, such as uploading the first note or searching for educational resources.
+
+Do not invent accounts, posts, followers, ratings, downloads, or other statistics to make the application appear active.
+
+## 20. NAVIGATION AND CONTENT-SPECIFIC UPLOADS
+
+Keep navigation intuitive and consistent.
+
+Users must be able to navigate between:
+
+* Home
+* Notes
+* Book PDFs
+* Question Papers
+* Thoughts
+* Search
+* Profile
+* Settings
+
+Make the upload action context-aware.
+
+For example:
+
+* Uploading from Notes should open the Notes upload form.
+* Uploading from Book PDFs should open the Book PDF upload form.
+* Uploading from Question Papers should open the Question Paper upload form.
+* Publishing from Thoughts should open the Thought editor.
+
+Do not show unrelated upload categories or irrelevant form fields.
+
+Prevent duplicate navigation elements and unnecessary buttons.
+
+Provide clear loading, success, error, and empty states throughout the application.
+
+## 21. QUALITY ASSURANCE AND ERROR PREVENTION
+
+Before completing the implementation, thoroughly test the application.
+
+Verify the following:
+
+1. Registration works correctly.
+2. Login and logout work correctly.
+3. Google Sign-In works if configured.
+4. Profile setup is saved correctly.
+5. Camera and gallery image selection work on supported devices.
+6. Profile photographs display correctly.
+7. Light Mode is the default for new users.
+8. Dark Mode can be selected manually.
+9. Theme preference persists after reopening.
+10. PDF selection and uploading work correctly.
+11. PDF covers can be selected and previewed.
+12. Published PDFs open correctly.
+13. Downloading and native sharing work where supported.
+14. Notes, Books, Question Papers, and Thoughts remain separate.
+15. Search returns relevant real results.
+16. Profile editing respects ownership permissions.
+17. Followers and Following show genuine account lists.
+18. Follow and unfollow operations update correctly.
+19. App Lock PIN works as expected.
+20. Main Information displays the complete notice.
+21. About App displays the complete feature information.
+22. The final About App signature reads exactly "By Satish Ranawat".
+23. Share App uses the native sharing interface.
+24. No Supabase Cloud Sync option is displayed.
+25. No fake profiles, followers, or fabricated activity are displayed.
+26. All buttons and navigation options work.
+27. No normal user action causes an application crash.
+28. Database permissions and storage access are properly configured.
+29. The interface works in both themes.
+30. No unfinished placeholder pages remain in the production experience.
+
+Fix all discovered errors before declaring the application complete.
+
+Do not claim that a feature is working merely because its button or interface exists. Test the actual functionality.
+
+## FINAL DEVELOPMENT INSTRUCTION
+
+Implement these requirements in the existing application with a strong focus on reliability, security, premium UI/UX, real user accounts, genuine educational content, and a clean user experience.
+
+Preserve all existing working functionality that does not conflict with these requirements.
+
+Do not merely provide a design mockup or a list of suggested changes. Make the actual code, database, storage, authentication, navigation, and interface changes necessary for the requested functionality.
+
+Do not introduce unnecessary features, fake statistics, fake accounts, or non-functional buttons.
+
+The final result must be a polished, production-oriented educational application with a premium iOS-inspired design, exactly two appearance modes, genuine user activity, proper PDF management, secure profile functionality, and a complete About App section.
+
+Final About App signature:
+
+By Satish Ranawat

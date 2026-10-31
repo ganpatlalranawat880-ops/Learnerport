@@ -1,0 +1,98 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile in Learnerport",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "username": { "type": "string" },
+        "email": { "type": "string" },
+        "photoUrl": { "type": "string" },
+        "bio": { "type": "string" },
+        "educationLevel": { "type": "string" },
+        "course": { "type": "string" },
+        "institution": { "type": "string" },
+        "fieldOfStudy": { "type": "string" },
+        "dateOfBirth": { "type": "string" },
+        "isProfileCompleted": { "type": "boolean" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "ResourceItem": {
+      "title": "ResourceItem",
+      "description": "Educational resource item such as notes, books, or question papers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "fileUrl": { "type": "string" },
+        "fileName": { "type": "string" },
+        "fileType": { "type": "string" },
+        "fileSize": { "type": "string" },
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorAvatar": { "type": "string" },
+        "likesCount": { "type": "integer" },
+        "downloadsCount": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "title", "authorId"]
+    },
+    "ThoughtItem": {
+      "title": "ThoughtItem",
+      "description": "Community thought or discussion post",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "content": { "type": "string" },
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorAvatar": { "type": "string" },
+        "authorUsername": { "type": "string" },
+        "likesCount": { "type": "integer" },
+        "commentsCount": { "type": "integer" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "content", "authorId"]
+    },
+    "CommentItem": {
+      "title": "CommentItem",
+      "description": "Comment on a community thought",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "thoughtId": { "type": "string" },
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorAvatar": { "type": "string" },
+        "content": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "thoughtId", "authorId", "content"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Stores user account profiles keyed by Firebase Auth UID"
+    },
+    "/resources/{resourceId}": {
+      "schema": "ResourceItem",
+      "description": "Stores educational resources shared by users"
+    },
+    "/thoughts/{thoughtId}": {
+      "schema": "ThoughtItem",
+      "description": "Stores thoughts shared by learners"
+    },
+    "/thoughts/{thoughtId}/comments/{commentId}": {
+      "schema": "CommentItem",
+      "description": "Stores comments on thoughts"
+    }
+  }
+}
